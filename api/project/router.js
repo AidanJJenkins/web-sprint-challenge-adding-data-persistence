@@ -19,19 +19,19 @@ router.post('/', (req, res) => {
   const { project_name } = req.body;
 
   if (!project_name) {
-    res.status(415).json({ error: 'Project name is required' });
+    res.status(415).json({ error: 'Project name is required' })
     return;
   }
 
   Project.create(req.body)
     .then(project => {
-      res.status(201).json(project);
+      res.status(201).json(project)
     })
     .catch(err => {
       console.log(err);
-      res.status(500).json([]);
+      res.status(500).json([])
     });
 });
 
 
-module.exports = router;
+module.exports = router

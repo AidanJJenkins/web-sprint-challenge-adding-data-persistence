@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
   const { task_description, project_id } = req.body;
 
   if (!task_description || !project_id) {
-    res.status(415).json({ error: 'Task description or project id is required' });
+    res.status(415).json({ error: 'Task description or project id is required' })
     return;
   }
   Task.create(req.body)
@@ -30,4 +30,4 @@ router.post('/', (req, res) => {
     })
 })
 
-module.exports = router;
+module.exports = router

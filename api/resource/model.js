@@ -12,7 +12,7 @@ function get() {
 }
 
 async function findById(id) {
-  return db('resources').where('resource_id', id).first();
+  return db('resources').where('resource_id', id).first()
 }
 
 

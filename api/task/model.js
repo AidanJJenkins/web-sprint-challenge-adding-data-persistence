@@ -25,7 +25,7 @@ async function get() {
 
 async function checkProjectId(projectId) {
   const [result] = await db('projects').where('project_id', projectId).limit(1)
-  return !!result // Returns true if a project with the given projectId exists, false otherwise
+  return !!result 
 }
 
 async function create(task) {

@@ -20,7 +20,7 @@ async function get() {
 }
 
 async function findById(id) {
-  return db('projects').where('project_id', id).first();
+  return db('projects').where('project_id', id).first()
 }
 
 async function create(project) {
